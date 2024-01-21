@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ExchangeAndMony.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">win</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DESKTOP-6FOQ2KB\SQLEXPRESS</Value>
+    </Setting>
+    <Setting Name="DB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">db_acount</Value>
+    </Setting>
+    <Setting Name="user" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moataz</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
