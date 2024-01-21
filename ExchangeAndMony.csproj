@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.props" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.props')" />
+  <Import Project="..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.props" Condition="Exists('..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.props')" />
+  <Import Project="..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.props" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F2D0791-B006-4F48-B4C0-ACACB1C017EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExchangeAndMony</RootNamespace>
+    <AssemblyName>ExchangeAndMony</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.XtraBars.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\ADB.cs" />
+    <Compile Include="data\conection.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\AccountsGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\AccountsGuide.Designer.cs">
+      <DependentUpon>AccountsGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\EmployeeGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\EmployeeGuide.Designer.cs">
+      <DependentUpon>EmployeeGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\RoofingAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\RoofingAccounts.Designer.cs">
+      <DependentUpon>RoofingAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\RoofingAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\RoofingAccounts.Designer.cs">
+      <DependentUpon>RoofingAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\GroupsGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\GroupsGuide.Designer.cs">
+      <DependentUpon>GroupsGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\BoxGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\BoxGuide.Designer.cs">
+      <DependentUpon>BoxGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyPricesGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyPricesGuide.Designer.cs">
+      <DependentUpon>CurrencyPricesGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyGuide.Designer.cs">
+      <DependentUpon>CurrencyGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\BoxInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\BoxInventory.Designer.cs">
+      <DependentUpon>BoxInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\AccountReconcilement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\AccountReconcilement.Designer.cs">
+      <DependentUpon>AccountReconcilement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\Classes\Gen_Class.cs" />
+    <Compile Include="pages\accountsInterface\Class_Accounts.cs" />
+    <Compile Include="pages\file\frm_conFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\file\frm_conFormat.Designer.cs">
+      <DependentUpon>frm_conFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\header.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\header.Designer.cs">
+      <DependentUpon>header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\ReceiptDivertClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\ReceiptDivertClients.Designer.cs">
+      <DependentUpon>ReceiptDivertClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\ReceiptVoucherClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\ReceiptVoucherClients.Designer.cs">
+      <DependentUpon>ReceiptVoucherClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\DoubleEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\DoubleEntry.Designer.cs">
+      <DependentUpon>DoubleEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.Designer.cs">
+      <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\ImageCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\ImageCard.Designer.cs">
+      <DependentUpon>ImageCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\RecipientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\RecipientInfo.Designer.cs">
+      <DependentUpon>RecipientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\GovernorateGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferInitializatuionInterface\GovernorateGuide.Designer.cs">
+      <DependentUpon>GovernorateGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolbarForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolbarForm1.Designer.cs">
+      <DependentUpon>ToolbarForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\AccountsGuide.resx">
+      <DependentUpon>AccountsGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\EmployeeGuide.resx">
+      <DependentUpon>EmployeeGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\RoofingAccounts.resx">
+      <DependentUpon>RoofingAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\RoofingAccounts.resx">
+      <DependentUpon>RoofingAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\GroupsGuide.resx">
+      <DependentUpon>GroupsGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\BoxGuide.resx">
+      <DependentUpon>BoxGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyPricesGuide.resx">
+      <DependentUpon>CurrencyPricesGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsInitializatuionInterface\CurrencyGuide.resx">
+      <DependentUpon>CurrencyGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\BoxInventory.resx">
+      <DependentUpon>BoxInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\AccountReconcilement.resx">
+      <DependentUpon>AccountReconcilement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\file\frm_conFormat.resx">
+      <DependentUpon>frm_conFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\header.resx">
+      <DependentUpon>header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\ReceiptDivertClients.resx">
+      <DependentUpon>ReceiptDivertClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\ReceiptVoucherClients.resx">
+      <DependentUpon>ReceiptVoucherClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\DoubleEntry.resx">
+      <DependentUpon>DoubleEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.resx">
+      <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\ImageCard.resx">
+      <DependentUpon>ImageCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\RecipientInfo.resx">
+      <DependentUpon>RecipientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\GovernorateGuide.resx">
+      <DependentUpon>GovernorateGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ToolbarForm1.resx">
+      <DependentUpon>ToolbarForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
+    <Folder Include="pages\transfer\transferprocessInterface\" />
+    <Folder Include="pages\transfer\transferReportsInterface\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{dcea364d-cd30-4544-a8b6-6ba878a42aae}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.8.0.0\build\Microsoft.Build.Tasks.Git.targets')" />
+  <Import Project="..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.targets" Condition="Exists('..\packages\Microsoft.SourceLink.Common.8.0.0\build\Microsoft.SourceLink.Common.targets')" />
+  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.0.0\build\Microsoft.SourceLink.GitHub.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

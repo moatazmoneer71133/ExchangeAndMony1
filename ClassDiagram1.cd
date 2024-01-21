@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ExchangeAndMony.pages.AccountReconcilement" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cBAAAgCAADAiABQSABCAAACCIAAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>pages\AccountReconcilement.cs</FileName>
+      <NewMemberFileName>pages\BoxInventory.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExchangeAndMony.pages.RecipientInfo" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IiAAAgCAADACABQSABCAAACCAAAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>pages\transfer\RecipientInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
